@@ -12,26 +12,51 @@ function Notes() {
   const [editIndex, setEditIndex] = useState(null);
   const [filter, setFilter] = useState("All");
 
-  const addNote = () => {
-    const note = { title, desc, cat };
+ const addNote = () => {
 
-    if (editIndex !== null) {
-      const updated = [...notes];
-      updated[editIndex] = note;
-      setNotes(updated);
-      setEditIndex(null);
-    } else {
-      setNotes([...notes, note]);
-    }
+  if (!title.trim()) {
+    alert("Please enter a title");
+    return;
+  }
 
-    setTitle("");
-    setDesc("");
-    setCat("");
-  };
+  if (!desc.trim()) {
+    alert("Please enter a description");
+    return;
+  }
+
+  if (!cat) {
+    alert("Please select a category");
+    return;
+  }
+
+  const note = { title, desc, cat };
+
+  if (editIndex !== null) {
+
+    const confirmUpdate = window.confirm("Are you sure you want to update this note?");
+    if (!confirmUpdate) return;
+
+    const updated = [...notes];
+    updated[editIndex] = note;
+    setNotes(updated);
+    setEditIndex(null);
+
+  } else {
+    setNotes([...notes, note]);
+  }
+
+  setTitle("");
+  setDesc("");
+  setCat("");
+};
 
   const deleteNote = (index) => {
-    setNotes(notes.filter((_, i) => i !== index));
-  };
+
+  const confirmDelete = window.confirm("Are you sure you want to delete this note?");
+  if (!confirmDelete) return;
+
+  setNotes(notes.filter((_, i) => i !== index));
+};
 
   const editNote = (index) => {
     setTitle(notes[index].title);
