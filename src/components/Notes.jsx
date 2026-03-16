@@ -83,7 +83,6 @@ function Notes() {
           Notes App
         </h1>
 
-        {/* Form */}
         <div className="flex flex-wrap gap-2 mb-4">
           <input
             className="bg-gray-700 border border-gray-600 text-white p-2 rounded"
@@ -118,7 +117,7 @@ function Notes() {
           </button>
         </div>
 
-        {/* Filter */}
+
         <div className="mb-4">
           <select
             className="bg-gray-700 border border-gray-600 text-white p-2 rounded"
@@ -131,7 +130,7 @@ function Notes() {
           </select>
         </div>
 
-        {/* Table */}
+
         <table className="w-full border border-gray-700 text-center text-gray-200">
           <thead>
             <tr className="bg-gray-700">
