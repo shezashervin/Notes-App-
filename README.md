@@ -1,16 +1,79 @@
-# React + Vite
+Notes Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Notes Management Application built using React (Vite) and Tailwind CSS.
+The application allows users to create, edit, delete, and filter notes by category. Notes are also stored in localStorage, allowing them to persist even after refreshing the page.
 
-Currently, two official plugins are available:
+Live Demo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Deployed on Vercel:
 
-## React Compiler
+https://notes-app-sheza.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Features:
 
-## Expanding the ESLint configuration
+Create notes with:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Title
+
+Description
+
+Category
+
+Display notes in a list/table
+
+Edit existing notes
+
+Delete notes with confirmation
+
+Filter notes by category
+
+Form validation for required fields
+
+Notes persistence using localStorage
+
+Tech Stack:
+
+React (Vite)
+
+Tailwind CSS
+
+JavaScript
+
+LocalStorage
+
+How to Run the Project Locally:
+
+1. Clone the repository
+git clone https://github.com/shezashervin/Notes-App.git
+
+3. Navigate to the project folder
+cd Notes-App
+
+5. Install dependencies
+npm install
+
+7. Start the development server
+npm run dev
+
+9. Open the application in your browser
+http://localhost:5173
+
+Project Structure
+src
+ ├ components
+ │   └ Notes.jsx
+ ├ App.jsx
+ ├ main.jsx
+ └ index.css
+ 
+Possible Future Improvements:
+
+Backend API integration for storing notes
+
+User authentication
+
+Advanced search and filtering
+
+Cloud database integration
+
+Improved UI/UX
